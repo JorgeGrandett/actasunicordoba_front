@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTRO</title>
+</head>
+<body>
+    <header>
+        <p>Registrarse</p>
+    </header>
+    <main>
+        <div>
+            <label for="nombres">Nombres:</label>
+            <input id="nombres" type="text" placeholder="Nombre Ejemplo" required>
+        </div>
+        <div>
+            <label for="apellidos">Apellidos:</label>
+            <input id="apellidos" type="text" placeholder="Apellido Ejemplo" required>
+        </div>
+        <div>
+            <label for="cedula">Cedula:</label>
+            <input id="cedula" type="text" placeholder="**********" required>
+        </div>
+        <div>
+            <label for="telefono">Número de teléfono:</label>
+            <input id="telefono" type="text" placeholder="**********" required>
+        </div>
+        <div>
+            <label for="direccion">Dirección:</label>
+            <input id="direccion" type="text" placeholder="Mi dirección" required>
+        </div>
+        <div>
+            <label for="cargo">Cargo:</label>
+            <select name="" id="cargo" required>
+                <option value="" disabled selected>Seleccione su cargo</option>
+                <option value="Funcionario">Funcionario</option>
+                <option value="Docente">Docente</option>
+              </select>
+        </div>
+        <button>Registrarse</button>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="../controller/registro.controller.js" type="mo"></script>
+</body>
+</html>
