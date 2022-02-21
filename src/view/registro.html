@@ -21,11 +21,15 @@
         </div>
         <div>
             <label for="cedula">Cedula:</label>
-            <input id="cedula" type="text" placeholder="**********" required>
+            <input id="cedula" type="number" placeholder="**********" required>
+        </div>
+        <div>
+            <label for="contraseña">Contraseña:</label>
+            <input id="contraseña" type="password" placeholder="**********" required>
         </div>
         <div>
             <label for="telefono">Número de teléfono:</label>
-            <input id="telefono" type="text" placeholder="**********" required>
+            <input id="telefono" type="number" placeholder="**********" required>
         </div>
         <div>
             <label for="direccion">Dirección:</label>
@@ -39,11 +43,11 @@
                 <option value="Docente">Docente</option>
               </select>
         </div>
-        <button>Registrarse</button>
+        <button onclick="validarRegistro()">Registrarse</button>
     </main>
     <footer>
 
     </footer>
-    <script src="../controller/registro.controller.js" type="mo"></script>
+    <script src="../controller/registro.controller.js"></script>
 </body>
 </html>
