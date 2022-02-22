@@ -4,50 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
     <title>REGISTRO</title>
 </head>
 <body>
-    <header>
-        <p>Registrarse</p>
+    <div class="contenedor">
+        <header class="cabecera">
+        <h3 class="">Registrarse</h3>
     </header>
-    <main>
-        <div>
+    <main class="cuerpo cuerpo-registro">
+        <div class="registro-item">
             <label for="nombres">Nombres:</label>
-            <input id="nombres" type="text" placeholder="Nombre Ejemplo" required>
+            <input class="entrada" id="nombres" type="text" placeholder="Nombre Ejemplo" required>
         </div>
-        <div>
+        <div  class="registro-item">
             <label for="apellidos">Apellidos:</label>
-            <input id="apellidos" type="text" placeholder="Apellido Ejemplo" required>
+            <input class="entrada" id="apellidos" type="text" placeholder="Apellido Ejemplo" required>
         </div>
-        <div>
+        <div  class="registro-item">
             <label for="cedula">Cedula:</label>
-            <input id="cedula" type="number" placeholder="**********" required>
+            <input class="entrada" id="cedula" type="number" placeholder="**********" required>
         </div>
-        <div>
+        <div  class="registro-item">
             <label for="contraseña">Contraseña:</label>
-            <input id="contraseña" type="password" placeholder="**********" required>
+            <input class="entrada" id="contraseña" type="password" placeholder="**********" required>
         </div>
-        <div>
+        <div  class="registro-item">
             <label for="telefono">Número de teléfono:</label>
-            <input id="telefono" type="number" placeholder="**********" required>
+            <input class="entrada" id="telefono" type="number" placeholder="**********" required>
         </div>
-        <div>
+        <div  class="registro-item">
             <label for="direccion">Dirección:</label>
-            <input id="direccion" type="text" placeholder="Mi dirección" required>
+            <input class="entrada" id="direccion" type="text" placeholder="Mi dirección" required>
         </div>
-        <div>
+        <div  class="registro-item">
             <label for="cargo">Cargo:</label>
-            <select name="" id="cargo" required>
+            <select class="entrada" name="" id="cargo" required>
                 <option value="" disabled selected>Seleccione su cargo</option>
                 <option value="Funcionario">Funcionario</option>
                 <option value="Docente">Docente</option>
               </select>
         </div>
-        <button onclick="validarRegistro()">Registrarse</button>
+        <div class="container-btn-registro">
+            <button class="button btn-registro" onclick="validarRegistro()">Registrarse</button>
+        </div>
+        
     </main>
-    <footer>
-
-    </footer>
+    <footer class="pie">
+        <span class=""
+          >© 2022
+          <a href="#" target="_blank" >Actas Unicordoba™</a>.
+          All Rights Reserved.
+        </span>
+      </footer>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="../controller/registro.controller.js"></script>
 </body>
 </html>

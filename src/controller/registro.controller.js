@@ -1,5 +1,8 @@
 
-function validarRegistro () {
+const api = 'http://localhost:3001';
+
+
+function validarRegistro() {
     var cedula = document.querySelector("#cedula").value;
     var contraseña = document.querySelector("#contraseña").value;
     var nombre = document.querySelector("#nombres").value;
@@ -26,17 +29,12 @@ function validarRegistro () {
 }
 
 async function registrarse(datosUsuario) {
+   
+    
     try {
         console.log(JSON.stringify(datosUsuario));
-        const respuesta = await fetch("http://localhost:3001/usuario", {
-            method: 'POST',
-            headers: {
-                Accept: 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(datosUsuario)
-        });
-        console.log(respuesta);
+        const respuesta = await axios.post(`${api}/usuario`,JSON.stringify(datosUsuario));
+        console.log(respuesta.data);
         /*const mensaje = await respuesta.json();
         console.log(mensaje);*/
     }
