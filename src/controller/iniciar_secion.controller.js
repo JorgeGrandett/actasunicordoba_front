@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3001";
+const API_URL = "https://backactasunicoroba.herokuapp.com";
 
 async function iniciarSecion() {
     const cedula = document.querySelector("#cedula").value;

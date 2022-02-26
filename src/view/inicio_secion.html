@@ -10,18 +10,19 @@
 <body>
     <div class="container">
         <header class="cabecera">
-        <h3>Iniciar Seción</h3>
+        <h3>Iniciar Sesion</h3>
     </header>
-    <main class="cuerpo login">
+    <main class="cuerpo login j-center">
+        <a id="link-to-dash" hidden href="dashboard.html"></a>
         <div class="registro-item">
             <label for="cedula">Usuario:</label>
-            <input class="entrada entrada-login" id="cedula" type="text" placeholder="Cedula">
+            <input class="entrada entrada-login" id="cedula-login" type="text" placeholder="Cedula">
         </div>
         <div class="registro-item">
             <label for="contraseña">Contraseña:</label>
-            <input class="entrada entrada-login" id="contraseña" type="password" placeholder="***********">
+            <input class="entrada entrada-login" id="contraseña-login" type="password" placeholder="***********">
         </div>
-        <button class="button btn-registro" onclick="iniciarSecion()">Ingresar</button>
+        <button class="button btn-registro" onclick="validarLogin()">Ingresar</button>
     </main>
     <footer class="pie">
         <span class=""
@@ -31,7 +32,7 @@
         </span>
       </footer>
     </div>
-    
-    <script src="../controller/iniciar_secion.controller.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../controller/registro.controller.js"></script>
 </body>
 </html>

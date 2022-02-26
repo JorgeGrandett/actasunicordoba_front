@@ -4,9 +4,80 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Crear</title>
 </head>
-<body>
-    
+<body onload="cargarUsuariosDisponibles()">
+    <div class="container">
+        <header class="cabecera">
+        <h3  style="padding-left: 10vw;">Crear Acta</h3>
+    </header>
+    <main class="cuerpo login justify-content-flex-start">
+        <div class="container-r-crear ">
+            <div class="registro-item r-crear">
+                <label for="nombre-organizador " ">Organizador:</label>
+                <input class="entrada entrada-crear" id="nombre-organizador" type="text" placeholder="Nombre del Organizador">
+            </div>
+            <div class="registro-item r-crear ">
+                <label for="cargo-organizador">Cargo:</label>
+                <input class="entrada entrada-crear" id="cargo-organizador" type="text" placeholder="Cargo del Organizador">
+            </div>
+        </div>
+
+        <div class="container-r-crear ">
+            <div class="registro-item r-crear">
+                <label for="fecha">Fecha:</label>
+                <input class="entrada entrada-crear" id="fecha" type="date" >
+            </div>
+            <div class="registro-item r-crear ">
+                <label for="hora">Hora:</label>
+                <input class="entrada entrada-crear" id="hora" type="time" >
+            </div>
+        </div>
+        <div class="container-r-crear">
+            <div class="registro-item r-crear">
+                <label for="asistentes">Asistentes:</label>
+                <select id="usuariosDB" class="entrada entrada-crear" multiple>
+                    <option selected hidden value="0"> *** Seleccione *** </option>
+                    
+
+                </select>
+            </div>
+        </div>
+        <div class="container-r-crear">
+            <div class="registro-item r-crear w-100">
+                <label for="agenda">Agenda:</label>
+                <textarea class="entrada entrada-crear t-area" id="agenda" type="text" placeholder="puntos de la agenda"  ></textarea>
+            </div>
+        </div>
+        <div class="container-r-crear">
+            <div class="registro-item r-crear w-100">
+                <label for="notas">Notas:</label>
+                <textarea class="entrada entrada-crear t-area" id="notas" type="text" placeholder="Notas"></textarea>
+            </div>
+        </div>
+        <div class="title-p-action">
+            <h4 style="padding-left: 10vw;">Puntos de Accion</h4>
+            <button class="btn-new-punto-action" onclick="nuevoPuntoAccion()" >Nuevo Punto</button>
+        </div>
+        
+
+        <div id="puntos-accion" class="c-puntos-accion">
+            
+        </div>
+        
+        <span style="padding-left: 10vw;" id="crear-sms"></span>
+        <button class="button btn-registro btn-crear" onclick="crearActa()">Crear</button>
+    </main>
+    <footer class="pie">
+        <span class=""
+          >© 2022
+          <a href="#" target="_blank" >Actas Unicordoba™</a>.
+          All Rights Reserved.
+        </span>
+      </footer>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../controller/registro.controller.js"></script>
 </body>
 </html>
