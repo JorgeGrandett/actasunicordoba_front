@@ -472,9 +472,17 @@ async function descargar() {
 
     const resp = await axios.get(`${api}/actas`);
     const pt = document.getElementById("list-actas").value;
-    await axios.get(`${api}/descargaracta/${resp.data[pt]._id}`)
+    const API2 = `${api}/descargaracta/${resp.data[pt]._id}`;
+   
+    return axios.get(API2,{responseType: 'blob'}).then((response) => {
+      const url = window.URL.createObjectURL(new Blob([response.data]));
+      const link = document.createElement('a');
+      link.href = url;
+      link.setAttribute('download', `IADH-${idA}.pdf`);
+      document.body.appendChild(link);
+      link.click();
+    });
     document.getElementById("link-to-dash").click();
-
   } catch (error) {
     console.log(error);
   }
